@@ -8,7 +8,7 @@ function Menu() {
 
   const loadScenario = async () => {
     try {
-      const module = await import(`../scenarios/${scenario}/App.tsx`);
+      const module = await import(`./scenarios/${scenario}/App`);
       return module;
     } catch (error) {
       setHasError(true);

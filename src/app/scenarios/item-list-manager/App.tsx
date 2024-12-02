@@ -1,3 +1,4 @@
+import { Button } from "flowbite-react";
 import { useState } from "react";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="App">
+      <div className="App flex flex-col">
         <h3>Item List</h3>
         <input
           type="text"
@@ -23,9 +24,9 @@ function App() {
           placeholder="Enter item"
           data-testid="input-field"
         />
-        <button onClick={handleAddItem} data-testid="add-button">
+        <Button onClick={handleAddItem} data-testid="add-button">
           Add Item
-        </button>
+        </Button>
         <ul data-testid="item-list">
           {items.map((item, index) => (
             <li key={index} data-testid="list-item">
