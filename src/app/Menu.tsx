@@ -8,7 +8,7 @@ function Menu() {
 
   const loadScenario = async () => {
     try {
-      const module = await import(`../../scenarios/${scenario}/App.tsx`);
+      const module = await import(`../scenarios/${scenario}/App.tsx`);
       return module;
     } catch (error) {
       setHasError(true);
@@ -21,7 +21,7 @@ function Menu() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Select Scenario</h1>
+        <h1 className="text-2xl">Select Scenario</h1>
         <select
           onChange={(e) => {
             setScenario(e.target.value);
