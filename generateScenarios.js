@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const scenariosDir = path.join(__dirname, "src", "scenarios");
+const scenariosDir = path.join(__dirname, "src", "app", "scenarios");
 const outputFilePath = path.join(__dirname, "src", "scenariosList.json");
 
 fs.readdir(scenariosDir, { withFileTypes: true }, (err, files) => {
